@@ -11,7 +11,7 @@
 ### Team Members
 - **Team Lead:** [Nabeel Nazeer](https://github.com/nabeelnazeer) - Cochin University of Science and Technology (DCS Cusat)
 - **Member 2:** [Pruthvikanth AC](https://github.com/itstatsuya) - Cochin University of Science and Technology (DCS Cusat)
-- **Member 3:** [Jeslin P James](https://github.com/Adithyan-mp) - Cochin University of Science and Technology (DCS Cusat)
+- **Member 3:** [Adithyan MP](https://github.com/Adithyan-mp) - Cochin University of Science and Technology (DCS Cusat)
 
 ---
 
@@ -79,28 +79,7 @@ Blaahhh, told ya... just check out the website.
 ![Workflow](Add your workflow/architecture diagram here)  
 *Add caption explaining your workflow*
 
----
 
-## Hardware Documentation
-
-### Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)  
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)  
-*Add caption explaining the schematic*
-
-### Build Photos
-
-![Components](Add photo of your components here)  
-*List out all components shown*
-
-![Build](Add photos of build process here)  
-*Explain the build steps*
-
-![Final](Add photo of final product here)  
-*Explain the final build*
 
 ---
 
