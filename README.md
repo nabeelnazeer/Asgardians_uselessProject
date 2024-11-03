@@ -4,11 +4,6 @@
 
 ---
 
-## Basic Details
-
-### Team Name: Asgardians
-
-### Team Members
 
 ## Basic Details
 
