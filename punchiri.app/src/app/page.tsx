@@ -1,17 +1,14 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-import { Download } from "lucide-react";
 import dynamic from "next/dynamic"; // Dynamically import face-api.js
 
 const EnhancedSmileDetector = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [score, setScore] = useState(0);
-  const [history, setHistory] = useState<number[]>([]);
   const [isDetecting, setIsDetecting] = useState(false);
   const [brightness, setBrightness] = useState(100);
   const [modelsLoaded, setModelsLoaded] = useState(false);
@@ -68,28 +65,10 @@ const EnhancedSmileDetector = () => {
   };
 
   const calculateSmileScore = (detection: any) => {
-    const mouth = detection.landmarks.getMouth();
-    const box = detection.detection.box;
-
-    const mouthWidth = Math.abs(mouth[0].x - mouth[6].x);
-    const mouthHeight = Math.abs(mouth[3].y - mouth[9].y);
-    const mouthTop = mouth[3].y;
-    const mouthCorners = (mouth[0].y + mouth[6].y) / 2;
-    const curvature = mouthCorners - mouthTop;
-
-    const faceWidth = box.width;
-    const normalizedCurvature = (curvature / faceWidth) * 100;
-    const normalizedWidth = (mouthWidth / faceWidth) * 100;
-
-    return Math.min(
-      Math.max(
-        Math.round(
-          (normalizedCurvature * 0.7 + normalizedWidth * 0.3) * 2 + 50
-        ),
-        0
-      ),
-      100
-    );
+    const expressions = detection.expressions;
+    const happyProbability = expressions.happy || 0;
+    const smileScore = Math.round(happyProbability * 100);
+    return smileScore;
   };
 
   const handlePlay = () => {
@@ -97,10 +76,13 @@ const EnhancedSmileDetector = () => {
 
     setIsDetecting(true);
     const interval = setInterval(async () => {
-      if (!canvasRef.current || !videoRef.current) return;
+      if (!canvasRef.current || !videoRef.current || !modelsLoaded) return;
 
       const detections = await faceapi
-        .detectAllFaces(videoRef.current, new faceapi.TinyFaceDetectorOptions())
+        .detectAllFaces(
+          videoRef.current,
+          new faceapi.TinyFaceDetectorOptions({ scoreThreshold: 0.5 })
+        )
         .withFaceLandmarks()
         .withFaceExpressions();
 
@@ -126,21 +108,10 @@ const EnhancedSmileDetector = () => {
         ctx.lineWidth = 2;
         ctx.strokeRect(box.x, box.y, box.width, box.height);
 
-        // Draw mouth landmarks with improved alignment
-        const mouth = detection.landmarks.getMouth();
-        ctx.beginPath();
-        ctx.moveTo(mouth[0].x, mouth[0].y);
-        mouth.forEach((point: { x: number; y: number }, index: number) => {
-          if (index !== 0) ctx.lineTo(point.x, point.y);
-        });
+        // Draw face landmarks
+        faceapi.draw.drawFaceLandmarks(canvasRef.current, [detection]);
 
-        ctx.closePath();
-
-        ctx.strokeStyle = "#00ff00";
-        ctx.lineWidth = 2;
-        ctx.stroke();
-
-        // Calculate and update smile score
+        // Calculate and update smile score using expressions
         const newScore = calculateSmileScore(detection);
         setScore(newScore);
 
@@ -157,30 +128,6 @@ const EnhancedSmileDetector = () => {
     }, 100);
 
     return () => clearInterval(interval);
-  };
-
-  const handleTakePhoto = () => {
-    if (canvasRef.current && videoRef.current) {
-      // Draw the current video frame onto the canvas
-      const ctx = canvasRef.current?.getContext("2d");
-      if (!ctx || !canvasRef.current || !videoRef.current) return;
-
-      ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-      ctx.drawImage(
-        videoRef.current,
-        0,
-        0,
-        canvasRef.current.width,
-        canvasRef.current.height
-      );
-      // Now download the image from the canvas
-      const link = document.createElement("a");
-      link.download = "smile-detector-photo.png";
-      link.href = canvasRef.current.toDataURL("image/png");
-      link.click();
-    } else {
-      console.error("Canvas or video element is not available.");
-    }
   };
 
   const handleBrightnessChange = (value: number[]) => {
@@ -219,10 +166,6 @@ const EnhancedSmileDetector = () => {
                 />
               </div>
               <div className="mt-4 space-y-4">
-                <Button onClick={handleTakePhoto}>
-                  <Download className="mr-2 h-4 w-4" />
-                  Take Photo
-                </Button>
                 <div>
                   <Label htmlFor="brightness">Brightness</Label>
                   <Slider
@@ -244,27 +187,9 @@ const EnhancedSmileDetector = () => {
             </CardHeader>
             <CardContent>
               <div className="text-6xl font-bold text-center mb-4">{score}</div>
-              <p className="text-center text-gray-600 dark:text-gray-400 mb-4">
+              <p className="text-center text-gray-600 dark:text-gray-400">
                 Your current smile score
               </p>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Score History</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {history.map((historyScore, index) => (
-                      <li
-                        key={index}
-                        className="flex justify-between items-center"
-                      >
-                        <span>Attempt {index + 1}</span>
-                        <span className="font-semibold">{historyScore}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
             </CardContent>
           </Card>
         </div>
