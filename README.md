@@ -4,19 +4,16 @@
 
 ---
 
-
 ## Basic Details
 
 ### Team Name: Asgardians
 
 ### Team Members
-| Role | Name | Institution |
-|------|------|-------------|
-| Team Lead | [Nabeel Nazeer](https://github.com/nabeelnazeer) | CUSAT |
-| Member | [Pruthvikanth AC](https://github.com/itstatsuya) | CUSAT |
-| Member | [Adithyan MP](https://github.com/Adithyan-mp) | CUSAT |
-
-
+| Role       | Name                                | Institution |
+|------------|-------------------------------------|-------------|
+| Team Lead  | [Nabeel Nazeer](https://github.com/nabeelnazeer) | CUSAT       |
+| Member     | [Pruthvikanth AC](https://github.com/itstatsuya) | CUSAT       |
+| Member     | [Adithyan MP](https://github.com/Adithyan-mp) | CUSAT       |
 
 ---
 
@@ -68,23 +65,21 @@ Blaahhh, told ya... just check out the website.
 
 ## Project Documentation
 
-### Screenshots (Add at least 3)
+### Screenshots
 
-![Popup Interface](demo_folder/shot1)  
-*model when no smile : huh*
+![Popup Interface](demo_folder/shot1.png)  
+*Model when no smile: "huh"*
 
-![Screenshot2](demo_folder/shot2)  
-*model when wier expression: nahuh*
+![Weird Expression](demo_folder/shot2.png)  
+*Model with weird expression: "nahuh"*
 
-![Screenshot3](demo_folder/shot3)  
-*bro that smile 10/10*
+![Perfect Smile](demo_folder/shot3.png)  
+*"Bro, that smile: 10/10!"*
 
 ### Diagrams
 
-![Workflow]()  
-*Add caption explaining your workflow*
-
-
+![Workflow](demo_folder/workflow.png)  
+*Explanation of the workflow goes here.*
 
 ---
 
@@ -103,9 +98,9 @@ Blaahhh, told ya... just check out the website.
 
 ## Team Contributions
 
-- [Name 1]: Nabeel Nazeer
-- [Name 2]: Pruthvikanth AC
-- [Name 3]: Adithyan MP
+- **Nabeel Nazeer**
+- **Pruthvikanth AC**
+- **Adithyan MP**
 
 ---
 
