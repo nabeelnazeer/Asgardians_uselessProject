@@ -83,19 +83,14 @@ if the model is taking time to load just a refresh a couple of times and wait. p
 *Explanation of the workflow goes here.*
 
 ---
-
 ## Project Demo
 
 ### Video
 
-[Add your demo video link here]  
-*Explain what the video demonstrates*
+[![Watch the video](https://img.youtube.com/vi/17YBn4c21nIn4SoayjNIBck4INiCEr2eC/0.jpg)](https://drive.google.com/file/d/17YBn4c21nIn4SoayjNIBck4INiCEr2eC/view?usp=sharing)
 
-### Additional Demos
+*Click the image above or [here](https://drive.google.com/file/d/17YBn4c21nIn4SoayjNIBck4INiCEr2eC/view?usp=sharing) to watch the video.*
 
-[Add any extra demo materials/links]
-
----
 
 ## Team Contributions
 
