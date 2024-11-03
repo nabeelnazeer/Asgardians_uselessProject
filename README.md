@@ -60,6 +60,7 @@ Nah, nothing to install—just check out [punchiri.vercel.app](https://punchiri.
 ## Run
 
 Blaahhh, told ya... just check out the website.
+if the model is taking time to load just a refresh a couple of times and wait. patience my friend (not a bug a model load issue its to train your patience #hidden feature)
 
 ---
 
