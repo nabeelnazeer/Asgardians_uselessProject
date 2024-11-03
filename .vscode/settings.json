@@ -1,3 +1,7 @@
 {
-  "conventionalCommits.scopes": ["changed to nextjs", "fix fs error"]
+  "conventionalCommits.scopes": [
+    "changed to nextjs",
+    "fix fs error",
+    "fixed null error"
+  ]
 }

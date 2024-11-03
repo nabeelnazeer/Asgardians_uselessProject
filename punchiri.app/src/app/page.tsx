@@ -130,9 +130,10 @@ const EnhancedSmileDetector = () => {
         const mouth = detection.landmarks.getMouth();
         ctx.beginPath();
         ctx.moveTo(mouth[0].x, mouth[0].y);
-        mouth.forEach((point, index) => {
+        mouth.forEach((point: { x: number; y: number }, index: number) => {
           if (index !== 0) ctx.lineTo(point.x, point.y);
         });
+
         ctx.closePath();
 
         ctx.strokeStyle = "#00ff00";
@@ -159,11 +160,26 @@ const EnhancedSmileDetector = () => {
   };
 
   const handleTakePhoto = () => {
-    if (canvasRef.current) {
+    if (canvasRef.current && videoRef.current) {
+      // Draw the current video frame onto the canvas
+      const ctx = canvasRef.current?.getContext("2d");
+      if (!ctx || !canvasRef.current || !videoRef.current) return;
+
+      ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+      ctx.drawImage(
+        videoRef.current,
+        0,
+        0,
+        canvasRef.current.width,
+        canvasRef.current.height
+      );
+      // Now download the image from the canvas
       const link = document.createElement("a");
       link.download = "smile-detector-photo.png";
-      link.href = canvasRef.current.toDataURL();
+      link.href = canvasRef.current.toDataURL("image/png");
       link.click();
+    } else {
+      console.error("Canvas or video element is not available.");
     }
   };
 
