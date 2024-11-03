@@ -9,9 +9,19 @@
 ### Team Name: Asgardians
 
 ### Team Members
-- **Team Lead:** [Nabeel Nazeer](https://github.com/nabeelnazeer) - Cochin University of Science and Technology (DCS Cusat)
-- **Member 2:** [Pruthvikanth AC](https://github.com/itstatsuya) - Cochin University of Science and Technology (DCS Cusat)
-- **Member 3:** [Adithyan MP](https://github.com/Adithyan-mp) - Cochin University of Science and Technology (DCS Cusat)
+
+## Basic Details
+
+### Team Name: KrazyPitz
+
+### Team Members
+| Role | Name | Institution |
+|------|------|-------------|
+| Team Lead | [Nabeel Nazeer](https://github.com/nabeelnazeer) | CUSAT |
+| Member | [Pruthvikanth AC](https://github.com/itstatsuya) | CUSAT |
+| Member | [Adithyan MP](https://github.com/Adithyan-mp) | CUSAT |
+
+
 
 ---
 
