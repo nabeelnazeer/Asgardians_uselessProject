@@ -70,13 +70,13 @@ Blaahhh, told ya... just check out the website.
 
 ### Screenshots (Add at least 3)
 
-![Popup Interface](Screenshot 2024-11-03 at 11.13.57.png)  
+![Popup Interface](demo_folder/shot1)  
 *model when no smile : huh*
 
-![Screenshot2](Screenshot 2024-11-03 at 11.14.32.png)  
+![Screenshot2](demo_folder/shot2)  
 *model when wier expression: nahuh*
 
-![Screenshot3](Screenshot 2024-11-03 at 11.14.44.png)  
+![Screenshot3](demo_folder/shot3)  
 *bro that smile 10/10*
 
 ### Diagrams
