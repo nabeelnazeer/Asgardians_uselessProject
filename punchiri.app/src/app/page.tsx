@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import dynamic from "next/dynamic"; // Dynamically import face-api.js
+import SmileImage from "./smile.jpg"; // Import the image
 
 const EnhancedSmileDetector = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -190,6 +191,13 @@ const EnhancedSmileDetector = () => {
               <p className="text-center text-gray-600 dark:text-gray-400">
                 Your current smile score
               </p>
+
+              {/* Conditionally display image if score is 100 */}
+              {score === 100 && (
+                <div className="mt-6 flex justify-center">
+                  <img src={SmileImage.src} alt="Congratulations!" className="rounded-lg shadow-lg" />
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
