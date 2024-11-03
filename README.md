@@ -1,46 +1,47 @@
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
-# [Project Name] 🎯
+# Punchiri.App 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Asgardians
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- **Team Lead:** [Nabeel Nazeer](https://github.com/nabeelnazeer) - Cochin University of Science and Technology (DCS Cusat)
+- **Member 2:** [Pruthvikanth AC](https://github.com/itstatsuya) - Cochin University of Science and Technology (DCS Cusat)
+- **Member 3:** [Jeslin P James](https://github.com/Adithyan-mp) - Cochin University of Science and Technology (DCS Cusat)
+
 
 ### Project Description
-[2-3 lines about what your project does]
+Ever felt like your smile was missing a score? Ever wanted a complex computer vision model to tell you just *how* happy you look? Introducing **Punchiri.App**—the smile-detecting app that nobody asked for but you’ll want to try anyway.
+
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Are you feeling down? Is your smile a little crooked? Maybe you just need a robot to remind you how unconvincing that grin is. That’s where **Punchiri.App** steps in.
 
-### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+### The Solution (that nobody asked for, but you’ll love anyway)
+Punchiri.App uses not one, not two, but *three* sophisticated computer vision models to analyze and score your smile on a scale from "fake grin" to "beaming sunshine." Why, you ask? Because, sometimes, you just need a friendly reminder of how subpar (or amazing!) your smile is.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- **Languages:** - [Typescript, Python, HTML, CSS]
+- **Frameworks/Libraries:** [Next.js, Django]
+- - **Tools:** VSCode, Git, GitHub, FaceAPI TENSORFLOW
+
 
 For Hardware:
 - [List main components]
 - [List specifications]
 - [List tools required]
 
-### Implementation
-For Software:
+### Implementation 
+the model uses face landmarking model, tiny face detector and face expression net to rate your smile with an algorithm we crafted.
 # Installation
-[commands]
-
+nah nothing to install just checkout punchiri.vercel.app
 # Run
-[commands]
+blaahhh toldya...checkout the website
 
 ### Project Documentation
 For Software:
