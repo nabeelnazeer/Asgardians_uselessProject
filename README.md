@@ -12,7 +12,7 @@
 
 ## Basic Details
 
-### Team Name: KrazyPitz
+### Team Name: Asgardians
 
 ### Team Members
 | Role | Name | Institution |
