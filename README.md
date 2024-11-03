@@ -70,18 +70,18 @@ Blaahhh, told ya... just check out the website.
 
 ### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)  
-*Add caption explaining what this shows*
+![Popup Interface](Screenshot 2024-11-03 at 11.13.57.png)  
+*model when no smile : huh*
 
-![Screenshot2](Add screenshot 2 here with proper name)  
-*Add caption explaining what this shows*
+![Screenshot2](Screenshot 2024-11-03 at 11.14.32.png)  
+*model when wier expression: nahuh*
 
-![Screenshot3](Add screenshot 3 here with proper name)  
-*Add caption explaining what this shows*
+![Screenshot3](Screenshot 2024-11-03 at 11.14.44.png)  
+*bro that smile 10/10*
 
 ### Diagrams
 
-![Workflow](Add your workflow/architecture diagram here)  
+![Workflow]()  
 *Add caption explaining your workflow*
 
 
